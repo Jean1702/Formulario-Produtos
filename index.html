@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos PRO</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo_claro.png" sizes="64x64" type="image/x-icon">
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Cadastrar Novo Produto</h2>
+    
+    <form id="productForm">
+        <div class="form-grid">
+            <div class="form-group full-width">
+                <label>Nome do Produto</label>
+                <div class="input-with-icon">
+                    <i class="fa-solid fa-tag"></i>
+                    <input type="text" id="nome" placeholder="Ex: Pastel de Frango" required>
+                </div>
+            </div>
+            
+            <div class="form-group full-width">
+                <label>Descrição</label>
+                <textarea id="descricao" rows="3" class="no-icon" placeholder="Detalhes do produto..." required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label>Preço (R$)</label>
+                <div class="input-with-icon">
+                    <i class="fa-solid fa-money-bill-wave"></i>
+                    <input type="number" step="0.01" id="preco" placeholder="0.00" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Estoque Inicial</label>
+                <div class="input-with-icon">
+                    <i class="fa-solid fa-boxes-stacked"></i>
+                    <input type="number" id="estoque" placeholder="Qtd" required>
+                </div>
+            </div>
+            
+            <div class="form-group center-single-item">
+                <label>Categoria</label>
+                <div class="input-with-icon">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <input type="text" id="categoria" maxlength="20" placeholder="Ex: Salgado, Doce e etc.." required>
+                </div>
+            </div>
+            
+
+            <div class="form-group full-width">
+                <label><i class="fa-solid fa-graduation-cap" style="margin-right: 5px;"></i> Selecione o Curso:</label>
+                <select id="curso" class="no-icon" required>
+                    <option value="" disabled selected>Escolha um curso da lista...</option>
+                    <option value="Automação">Automação</option>
+                    <option value="Informática">Informática</option>
+                    <option value="Edificações">Edificações</option>
+                    <option value="Eletrotécnica">Eletrotécnica</option>
+                    <option value="Segurança do Trabalho">Segurança do Trabalho</option>
+                </select>
+            </div>
+
+            <div class="form-group full-width">
+                <label>Ano do Curso:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="ano" value="1" required> 1º Ano</label>
+                    <label><input type="radio" name="ano" value="2"> 2º Ano</label>
+                    <label><input type="radio" name="ano" value="3"> 3º Ano</label>
+                </div>
+            </div>
+
+            <div class="form-group full-width">
+                <label>Imagens do Produto (Máximo 3):</label>
+                
+                <label for="imagens" class="upload-area" id="drop-zone">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                    <p>Clique aqui para escolher as imagens</p>
+                    <small style="color: var(--text-light);">Formatos: JPG, PNG, WEBP</small>
+                </label>
+                
+                <input type="file" id="imagens" accept="image/*" multiple>
+                
+                <div id="image-preview-container" class="image-preview-container"></div>
+            </div>
+        </div>
+
+        <button type="submit" id="btnSubmit" class="submit-btn">
+            <i class="fa-solid fa-check"></i> Cadastrar Produto
+        </button>
+        <div id="message"></div>
+    </form>
+</div>
+
+<script type="module" src="main.js"></script>
+</body>
+</html>
