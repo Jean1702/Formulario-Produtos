@@ -3,8 +3,8 @@
     // ==========================================
     // SUBSTITUA PELAS SUAS VARIÁVEIS DE AMBIENTE
     // ==========================================
-    const SUPABASE_URL = 'https://SEU_PROJETO.supabase.co';
-    const SUPABASE_ANON_KEY = 'SUA_CHAVE_AQUI';
+    const SUPABASE_URL = 'https://kaybspuiotepwlxwsotk.supabase.co';
+    const SUPABASE_ANON_KEY = 'sb_publishable_AEyJwDweGKHMNgudCTyBDw_v1TG840B';
     
     const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
